@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"  href="{% static 'css/bootstrap.min.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+	<link rel="stylesheet"  href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet"  href="{% static 'css/style.css' %}">
+	<link rel="stylesheet"  href="{% static 'css/responsive.css' %}">
+  <script  src="{% static 'js/respond.js' %}"></script>
+  <style media="screen">
+footer {
+    margin:0px;
+    margin-top:-50px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roberto', sans-serif;
+    position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #ddd;
+    background-image: url("{% static 'img/can.png' %}");
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  {% include "assessment/navbar.html" %}
+
+ <section id="main" class="main d-flex justify-content-center">
+   <div class="main-content align-self-center">
+    <div class="welcome display-4">Hello, Candidate</div><br>
+       <div class="welcome">Welcome to <strong><span style="font-size:40px;">ƎႧUTI⅃ԳA</span></strong></div>
+       <div class="type">An Online Platform to check your skills</div>
+    <hr class="my-4">
+     <div>You can access various features after Login</div>
+<br><br>
+       <a class="cta cta-contact btn-lg"  style="color:#fff; text-decoration:none;" href="candidatesignup" role="button">Create Your Account</a>
+      <a class="cta cta-login" href="candidatelogin" style="color:#fff; text-decoration:none;" role="button">Login</a>
+
+   </div>
+
+
+      <svg viewBox="0 0 1400 100" class="svg-bottom">
+		<polygon points="0,0 200,100 1200,100 1400,0 1400,100 0,100 0,0" style="fill:white;"/>
+	</svg>
+    </section>
+
+
+
+  <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script><script type="text/javascript" src="{% static 'bootstrap.min.js' %}"></script>
+<script  src="{% static 'js/jquery.nav.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<script  src="{% static 'js/isotope.js' %}"></script>
+ 
+  {% include "assessment/footer.html" %}
+</body>
+
+</html>

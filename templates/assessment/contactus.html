@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+	<link rel="stylesheet"  href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+	<link rel="stylesheet"  href="{% static 'css/responsive.css' %}">
+  <script type="text/javascript" src="{% static 'js/respond.js' %}"></script>
+</head>
+<style>
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roberto', sans-serif;
+    position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #ddd;
+    background-image: url("{% static 'img/contact-bg.jpg' %}");
+
+}
+</style>
+<body>
+
+  {% include "assessment/navbar.html" %}
+
+  <section class="section-padding contact" id="contact" >
+	<div class="container">
+		<div class="section-header full-width text-center">
+			<div class="row">
+				<div class="col-md-12">
+					<br>
+					<h3>Contact</h3>
+				</div>
+			</div>
+		</div>
+
+<br><br>
+
+		<div class="contact-top text-center animation" data-animation="fadeInLeft">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="contact-location"><i class="fa fa-location-arrow"></i> Address</div>
+					<p>761, Madhya Pradesh , India</p>
+				</div>
+
+				<div class="col-md-4">
+					<div class="contact-email"><i class="fa fa-envelope"></i> Email</div>
+					<p>aplitude.hr@gmail.com</p>
+				</div>
+
+				<div class="col-md-4">
+					<div class="contact-phone"><i class="fa fa-phone"></i> Phone</div>
+					<p>+91 825-1999-950</p>
+				</div>
+			</div>
+		</div>
+      </div>
+
+
+	  <br>
+    <div class="contact-form animation" data-animation="zoomIn">
+			<div class="row">
+				<div class="col"></div>
+				<div class="col order-1 text-center">
+
+                      <form class="contact-form" method="POST" autocomplete="off">
+                        <!-- Very Important csrf Token -->
+                        {% csrf_token %}
+                        <div class="form-group">
+                          <p>
+                          <h3>{{ form.as_p }}</h3>
+                          </p>
+                          <br>
+                          <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
+                        </div>
+
+                      </form>
+
+                </div>
+				<div class="col order-last"></div>
+            </div>
+    </div>
+
+	  <svg viewBox="0 0 1400 100" class="svg-bottom">
+		<polygon points="0,0 200,100 1200,100 1400,0 1400,100 0,100 0,0" style="fill:white"/>
+	</svg>
+
+  </section>
+
+
+  <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script  src="{% static 'js/particles.min.js' %}"></script>
+    <script  src="{% static 'js/myparticles.js' %}"></script>
+    <script  src="{% static 'js/jquery.nav.js' %}"></script>
+    <script  src="{% static 'js/isotope.js' %}"></script>
+<!--    <script  src="{% static 'main.js' %}"></script>-->
+
+
+  {% include "assessment/footer.html" %}
+</body>
+
+</html>

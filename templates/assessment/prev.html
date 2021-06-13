@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div class="navigation"><a href="{% url parent %}" class="btn pull-left back">Back</a><!-- /.btn -->
+				{% if next %}
+					<a href="{% url parent %}{{ next.slug }}" class="btn pull-right rm0 nav-next-item">Next</a><!-- /.btn -->
+				{% endif %}
+				{% if prev %}
+					<a href="{% url parent %}{{ prev.slug }}" class="btn pull-right rm5 nav-prev-item">Previous</a><!-- /.btn -->
+				{% endif %}
+			</div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+.contact
+{
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #ddd;
+}
+
+.contact h3
+{
+	color: #fff;
+}
+
+.contact::before
+{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(47,54,64,.85);
+}
+
+.contact-top, .contact-form
+{
+	margin-top: 60px;
+	margin: auto;
+}
+
+.contact-location,.contact-email,.contact-phone
+{
+	font-weight: bold;
+	color: #fff;
+}
+
+input,textarea
+{
+	width: 100%;
+	background-color: rgba(0,0,0,0);
+	color: #ddd;
+	border: 1px solid #ddd;
+	margin-bottom: 40px;
+}
+
+input:not([type="submit"])
+{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+}
+
+textarea
+{
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+input:([type="submit"])
+{
+	width: auto;
+	//margin: 0 auto;
+	max-width: 50%;
+	padding: 8px 60px;
+	border: none;
+	color: #fff;
+	background-color: #e84118;
+	cursor: pointer;
+}
+
+.contact i.fa
+{
+	margin-right: 15px;
+}
